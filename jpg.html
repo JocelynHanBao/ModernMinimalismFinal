@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>jpg</title>
+    <!--css-->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/jpg.css" />
+    <script defer src="arena.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <!-- Replace this URL with your channel to connect the API! -->
+    <a
+      href="https://www.are.na/vasu-mohan-eere-fvp4ca/modern-minimalism"
+      id="channel-url"
+    >
+      <!-- The channel title will be inserted inside this h1. -->
+    </a>
+    <header>
+      <div>
+        <div class="header-long"></div>
+        <div class="header-circle"></div>
+      </div>
+      <div>
+        <div class="header-circle"></div>
+        <div class="header-circle"></div>
+      </div>
+    </header>
+
+    <nav>
+      <p>.jpg</p>
+      <a href="./index.html">home</a>
+    </nav>
+
+    <section>
+      <ul class="image-blocks"></ul>
+    </section>
+
+    <!-- Images. -->
+    <template id="image-block">
+      <li>
+        <figure class="image-block">
+          <picture>
+            <source class="image-thumb" />
+            <source class="image-square" />
+            <source class="image-display" />
+            <img class="image" />
+          </picture>
+          <figcaption class="description"></figcaption>
+          <p class="time-updated"></p>
+          <p class="time-created"></p>
+        </figure>
+      </li>
+    </template>
+
+  <div id="preview-wrap" onclick="hide()">
+    <img id="preview" onclick="previewImg(this)" src="" alt="">
+  </div>
+
+  </body>
+
+<script>
+  const previewWrap = document.getElementById('preview-wrap')
+  const preview = document.getElementById('preview')
+
+  const previewImg = (e) => {
+    e.cancelBubble  = true
+    previewWrap.className = 'show'
+    preview.src = e.src || 'https://img1.baidu.com/it/u=1132185528,4267352519&fm=253&fmt=auto&app=138&f=JPEG?w=440&h=440'
+  }
+
+  const hide = (e) => {
+    previewWrap.className = ''
+    preview.src = ''
+  }
+
+</script>
+</html>

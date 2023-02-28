@@ -1,0 +1,20 @@
+.text-blocks {
+  margin: 5%;
+  overflow: hidden;
+  width: 90%;
+  line-height: 200%;
+  background-color: #ecebe7;
+  border-radius: 22%;
+}
+
+.text-block {
+  color: black;
+  object-fit: cover;
+  margin: 10%;
+  line-height: 200%;
+}
+
+.content p {
+  line-height: 200%;
+  margin: 20%;
+}

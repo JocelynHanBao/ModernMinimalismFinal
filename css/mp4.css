@@ -1,0 +1,32 @@
+.video-embed-block {
+  display: flex;
+  overflow: hidden;
+  width: 80vw;
+  row-gap: 10%;
+  margin: 50px;
+}
+
+iframe {
+  width: 80vw;
+  border-radius: 15%;
+}
+
+@media only screen and (max-width: 768px) {
+  video-embed-block {
+    width: calc(100% - 44px) !important;
+    margin: 22px !important;
+  }
+  video-embed-block > div {
+    display: flex;
+  }
+  video-embed-block > div > .video-embed-block {
+    width: 100%;
+    margin: 0 0 28px 0;
+  }
+  video-embed-block .video-embed-center > .video-embed-block {
+    margin: 0 0 28px 0;
+  }
+  video-embed-block > p {
+    display: none;
+  }
+}
