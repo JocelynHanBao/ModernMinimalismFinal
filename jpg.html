@@ -42,8 +42,9 @@
     </section>
 
     <!-- Images. -->
+
     <template id="image-block">
-      <li>
+      <li class="image-block">
         <figure class="image-block">
           <picture>
             <source class="image-thumb" />
@@ -55,29 +56,33 @@
           <p class="time-updated"></p>
           <p class="time-created"></p>
         </figure>
+
+        <aside>
+          <img class="image" />
+        </aside>
       </li>
     </template>
 
-  <div id="preview-wrap" onclick="hide()">
-    <img id="preview" onclick="previewImg(this)" src="" alt="">
-  </div>
-
+    <div id="preview-wrap" onclick="hide()">
+      <img id="preview" onclick="previewImg(this)" src="" alt="" />
+    </div>
   </body>
 
-<script>
-  const previewWrap = document.getElementById('preview-wrap')
-  const preview = document.getElementById('preview')
+  <script>
+    const previewWrap = document.getElementById("preview-wrap");
+    const preview = document.getElementById("preview");
 
-  const previewImg = (e) => {
-    e.cancelBubble  = true
-    previewWrap.className = 'show'
-    preview.src = e.src || 'https://img1.baidu.com/it/u=1132185528,4267352519&fm=253&fmt=auto&app=138&f=JPEG?w=440&h=440'
-  }
+    const previewImg = (e) => {
+      e.cancelBubble = true;
+      previewWrap.className = "show";
+      preview.src =
+        e.src ||
+        "https://img1.baidu.com/it/u=1132185528,4267352519&fm=253&fmt=auto&app=138&f=JPEG?w=440&h=440";
+    };
 
-  const hide = (e) => {
-    previewWrap.className = ''
-    preview.src = ''
-  }
-
-</script>
+    const hide = (e) => {
+      previewWrap.className = "";
+      preview.src = "";
+    };
+  </script>
 </html>

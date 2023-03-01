@@ -1,3 +1,7 @@
+:root {
+  --count: 0;
+}
+
 .transition {
   cursor: pointer;
   transition: all 0.24s;
@@ -104,4 +108,27 @@ h3 {
 
 p {
   color: grey;
+}
+
+.image-block aside {
+  display: none;
+  position: fixed;
+  top: 25vh;
+  left: 25vw;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+  padding: cal(var(--spacing) * 2);
+}
+
+.image-block.active aside {
+  display: block;
+  opacity: 1;
+  /*width: 200%;
+  height: 200%;
+  object-fit: fill;*/
+}
+
+.image-block.meidian figure {
+  opacity: 0.5;
 }
